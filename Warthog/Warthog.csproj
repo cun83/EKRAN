@@ -171,7 +171,6 @@
     <Compile Include="Classes\Sound\SoundCommands.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\Secrets.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

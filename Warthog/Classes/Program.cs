@@ -109,7 +109,6 @@ namespace Warthog
                 //config.Token = Console.ReadLine();              // Read the bot token from console.
 
 
-                //TODO: hardcoded keys are annoying, an the file missing.
                 config.Token = BotConfig.Load().Token; // //Secrets.DiscordBotToken;
                 Console.Write("Bot Prefix: ");
 

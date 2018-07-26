@@ -1,3 +1,6 @@
+# IMPORTANT
+## The DCS related features are disabled in this fork and will be removed alltogether!
+
 # EKRAN
 You better watch it!
 

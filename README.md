@@ -1,6 +1,10 @@
 # IMPORTANT
 ## The DCS related features are disabled in this fork and will be removed alltogether!
 
+
+#### Original readme from [TheFitzZZ/EKRAN](https://github.com/TheFitzZZ/EKRAN) follows below: ##
+---
+
 # EKRAN
 You better watch it!
 
@@ -10,7 +14,7 @@ This Discord bot tries to provide an easy platform to manage and announce events
 
 ## Get the bot
 
-To have the Bot join your Discord server simply click [here](https://discordapp.com/oauth2/authorize?client_id=396040373652291592&scope=bot).
+To have the Bot join your Discord server simply click here **EDIT cun83: upstream's bot link removed, this fork's bot is not available for public consumption at this time.**
 
 ### Donations:
 If you want to support my work or just leave a little thanks, I'd appreciate a small donation towards my coffee fund :-) 

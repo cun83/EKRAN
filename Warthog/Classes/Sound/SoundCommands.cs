@@ -102,12 +102,14 @@ namespace Warthog.Classes
         ///
         /// Sound commands
         /// 
-
-        #region EKRAN audio stuff
-
-        [Command("angrywatchekran", RunMode = RunMode.Async)]
-        [Alias("angryekran")]
-        public async Task Angrywatchekran(IVoiceChannel channel = null)
+        /// <summary>
+        /// Nod to upstream humor :)
+        /// </summary>
+        /// <param name="channel"></param>
+        /// <returns></returns>
+        [Command("wdyltf", RunMode = RunMode.Async)]
+        [Alias("WhereDidYouLearnToFly")]
+        public async Task WhereDidYouLearnToFly(IVoiceChannel channel = null)
         {
             await DeleteCommandMessage();
             Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
@@ -118,178 +120,9 @@ namespace Warthog.Classes
 
             // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
             var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\watchekranloud.mp3");
-            await audioClient.StopAsync();
-
-        }
-
-        [Command("watchekran", RunMode = RunMode.Async)]
-        [Alias("ekran")]
-        public async Task Ekran(IVoiceChannel channel = null)
-        {
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\watchekran.mp3");
-            await audioClient.StopAsync();
-
-        }
-
-        [Command("lowergear", RunMode = RunMode.Async)]
-        public async Task Lowergear(IVoiceChannel channel = null)
-        {
-
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\lowergear.mp3");
-            await audioClient.StopAsync();
-
-        }
-
-        [Command("Nopermission", RunMode = RunMode.Async)]
-        public async Task Nopermission(IVoiceChannel channel = null)
-        {
-
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\Nopermission.mp3");
-            await audioClient.StopAsync();
-
-        }
-
-        [Command("Receivedata", RunMode = RunMode.Async)]
-        public async Task Receivedata(IVoiceChannel channel = null)
-        {
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\Receivedata.mp3");
-            await audioClient.StopAsync();
-
-        }
-
-        [Command("Systemsfailure", RunMode = RunMode.Async)]
-        public async Task Systemsfailure(IVoiceChannel channel = null)
-        {
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\Systemsfailure.mp3");
-            await audioClient.StopAsync();
-
-        }
-
-        [Command("Transfercomplete", RunMode = RunMode.Async)]
-        public async Task Transfercomplete(IVoiceChannel channel = null)
-        {
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\Transfercomplete.mp3");
+            await SendAsync(audioClient, @"Soundeffects\WhereDidYouLearnToFly.wav");
             await audioClient.StopAsync();
         }
-
-        [Command("ussr", RunMode = RunMode.Async)]
-        public async Task Ussr(IVoiceChannel channel = null)
-        {
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\AnthemofUSSR.mp3");
-            await audioClient.StopAsync();
-        }
-
-        [Command("usa", RunMode = RunMode.Async)]
-        public async Task USA(IVoiceChannel channel = null)
-        {
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\Americafuckyeah.mp3");
-            await audioClient.StopAsync();
-        }
-
-        [Command("chumdrum", RunMode = RunMode.Async)]
-        public async Task Chumdrum(IVoiceChannel channel = null)
-        {
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\ChumDrum.mp3");
-            await audioClient.StopAsync();
-        }
-
-        [Command("uk", RunMode = RunMode.Async)]
-        public async Task Uk(IVoiceChannel channel = null)
-        {
-            Console.WriteLine($"{DateTime.Now} [Audit] Sound: {Context.User.Username} ran a sound command.");
-
-            await DeleteCommandMessage();
-            // Get the audio channel
-            channel = (Context.User as IVoiceState).VoiceChannel;
-            if (channel == null) { await Context.User.SendMessageAsync("User must be in a voice channel."); return; }
-
-            // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
-            var audioClient = await channel.ConnectAsync();
-            await SendAsync(audioClient, @"Soundeffects\ukanthem.mp3");
-            await audioClient.StopAsync();
-        }
-        #endregion EKRAN audio stuff
 
 
         [Command("PlayYT", RunMode = RunMode.Async)]
